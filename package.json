@@ -1,0 +1,43 @@
+{
+  "name": "gulp-personal-prop",
+  "version": "1.0.1",
+  "description": "gulp-ppro",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --build",
+    "svgSprive": "gulp svgSprive"
+  },
+  "author": "D.Sopp <sp_dmitriy@mail.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-fonter": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-util": "latest",
+    "gulp-version-number": "latest",
+    "gulp-webp": "latest",
+    "gulp-webp-html-nosvg": "latest",
+    "gulp-webpcss": "latest",
+    "sass": "latest",
+    "webp-converter": "2.2.3",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  }
+}
