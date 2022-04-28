@@ -1,0 +1,48 @@
+.price 
+  background-color: $price-bg
+  padding: 100px 0
+  &__list 
+    @include a400
+    margin-top: 75px
+    display: flex
+    justify-content: space-between
+  &-item 
+    height: 100%
+    width: 33.3%
+    margin: 0 15px
+    padding: 30px 25px
+    border-radius: 5px
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15)
+    background-color: #fff
+    &.center-item 
+      background-color: #eaf7ff
+    &__title
+      height: 150px
+      margin-bottom: 50px   
+  &__name 
+    color: $blue-num
+    @include a700
+    font-size: 22px
+    margin-bottom: 30px
+  &__period 
+    font-size: 27px
+    text-transform: uppercase
+    margin-bottom: 15px
+  &__subtitle 
+    font-size: 18px
+    margin-bottom: 10px
+  &__cost 
+    font-size: 22px
+    color: $blue-btn
+  &__options
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center 
+    height: 450px
+    &-title
+      @include a700 
+      font-size: 16px
+    &-list li 
+      @include a400
+      margin: 20px 0

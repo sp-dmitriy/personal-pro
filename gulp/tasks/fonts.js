@@ -69,8 +69,8 @@ export const fontsStyle = () => {
   font-style: normal;
   font-family: ${fontName};
   font-weight: ${fontWeight};
-  src: url("../fonts/${fontName}.woff2") format("woff2"),
-        url("../fonts/${fontName}.woff") format("woff");
+  src: url("../fonts/${fontFileName}.woff2") format("woff2"),
+        url("../fonts/${fontFileName}.woff") format("woff");
 }\r\n
             `, cb)
             newFileOnly = fontFileName

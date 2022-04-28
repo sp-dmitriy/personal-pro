@@ -1,0 +1,64 @@
+.about 
+  background-color: $dark-grey
+  color: #fff
+  @include a400
+  display: flex
+  &__title
+    margin-top: 65px
+  &-box 
+    width: 50%
+    &.box-left 
+      display: flex
+      justify-content: end
+    &.box-right 
+      display: flex
+      justify-content: start
+  &__text 
+    width: 650px
+  &__image 
+    width: 950px
+    height: 522px
+    background-image: url(../../img/about.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+  &__text 
+    padding: 15px
+    width: 665px
+    p 
+      margin-top: 30px
+      font-size: 16px
+      line-height: 160%
+  &__profession 
+    color: #b9b9b9
+    font-size: 22px
+    margin-top: 45px
+  &__name 
+    @include a700
+    font-size: 26px
+    margin-top: 15px
+  &__quote 
+    font-style: italic
+    color: #ccc
+    margin: 20px 0
+  &__contacts 
+    margin-top: 45px
+    max-width: 450px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-title 
+      @include a700
+      font-size: 16px
+    &-line
+      height: 1px
+      width: 50px
+      background-color: #fff  
+    &-social a
+      margin-right: 20px
+    &-social svg
+      fill: #fff
+      transition: all .2s      
+      &:hover
+        fill: $blue-btn
+
+

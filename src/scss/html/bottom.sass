@@ -1,0 +1,33 @@
+.bottom 
+  background-color: $dark-grey
+  padding: 80px 0 20px 0
+  color: $bottom-grey
+  @include r400
+  &__inner 
+    border-top: 1px solid $bottom-grey
+    padding: 40px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__box 
+    display: flex
+    align-items: center
+
+  &-menu 
+    margin-left: 30px
+    &__list li 
+        display: inline-block
+    &_list li + li 
+      margin-left: 30px
+    &__link  
+      color: $bottom-grey
+      transition: all 0.2s
+      padding: 0 20px 7px 0
+      &:hover
+        color: $blue-btn
+  &__btn
+    color: $bottom-grey
+    transition: all 0.2s
+    padding-bottom: 7px
+    &:hover 
+      color: $blue-btn

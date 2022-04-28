@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-@@include('html/head.html', {
-  "title" : "Главная"
-})
-<body>
-  @@include('html/header.html', {})
-  <main>
-    <span>
-      <!-- <img width="50px" src="@/img/01.jpg" alt=""> -->
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nobis modi aperiam deserunt optio neque ratione laboriosam distinctio unde ex.
-    </span>
-  </main>
-  @@include('html/footer.html', {})
-  <script src="js/app.min/js"></script>
-</body>
+<html lang="ru ">
+  @@include('html/head.html', { "title" : "ПерсоналPRO" })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="main">
+        @@include('html/intro.html')
+        @@include('html/program.html')
+        @@include('html/counter.html')
+        @@include('html/benefits.html')
+        @@include('html/price.html')
+        @@include('html/about.html')
+        @@include('html/bottom.html')
+      </main>
+      @@include('html/footer.html')
+    </div>
+    @@include('html/scripts.html')
+  </body>
 </html>
