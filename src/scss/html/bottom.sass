@@ -1,18 +1,17 @@
 .bottom 
   background-color: $dark-grey
-  padding: 80px 0 20px 0
+  padding: 60px 0 20px 0
   color: $bottom-grey
   @include r400
   &__inner 
     border-top: 1px solid $bottom-grey
-    padding: 40px 0
+    padding: 20px 0 0 0 
     display: flex
     justify-content: space-between
     align-items: center
   &__box 
     display: flex
     align-items: center
-
   &-menu 
     margin-left: 30px
     &__list li 
@@ -26,8 +25,24 @@
       &:hover
         color: $blue-btn
   &__btn
+    border-radius: 40px
+    text-align: center
+    width: 250px
+    border: 1px solid $bottom-grey
+    padding: 8px
     color: $bottom-grey
     transition: all 0.2s
     padding-bottom: 7px
     &:hover 
       color: $blue-btn
+      border: 1px solid $blue-btn
+  &__contacts
+    width: 100%
+    text-align: center
+    a
+      margin: 15px
+    svg
+      fill: #fff
+      transition: all .2s      
+      &:hover
+        fill: $blue-btn    

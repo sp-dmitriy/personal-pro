@@ -101,8 +101,8 @@
       top: -100%
       left: 0
       width: 50%
-      height: 300px
-      background-color: #E6E6E6
+      height: 260px
+      background-color: #fff
       padding: 70px 10px 20px 10px
       transition: all 0.3s ease 0s
       border-radius: 0 0 10px 0
@@ -111,8 +111,16 @@
     &__list
       display: block
       li 
-        margin: 0 0 20px 0  
-        
+        margin: 0 0 20px 0
+
+@media (max-width: 410px)
+  .header__logo
+    flex: 0 0 100px
+    margin: 0 0 0 14px
+  .header__btns 
+    position: relative
+    z-index: 3
+    width: 145px
 
 
   

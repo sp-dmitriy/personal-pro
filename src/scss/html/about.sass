@@ -2,9 +2,10 @@
   background-color: $dark-grey
   color: #fff
   @include a400
-  display: flex
+  &__inner
+    display: flex
   &__title
-    margin-top: 65px
+    margin-top: 80px
   &-box 
     width: 50%
     &.box-left 
@@ -15,6 +16,7 @@
       justify-content: start
   &__text 
     width: 650px
+    position: relative
   &__image 
     width: 950px
     height: 522px
@@ -22,7 +24,7 @@
     background-repeat: no-repeat
     background-size: cover
   &__text 
-    padding: 15px
+    padding: 15px 30px 15px 15px
     width: 665px
     p 
       margin-top: 30px
@@ -40,25 +42,3 @@
     font-style: italic
     color: #ccc
     margin: 20px 0
-  &__contacts 
-    margin-top: 45px
-    max-width: 450px
-    display: flex
-    align-items: center
-    justify-content: space-between
-    &-title 
-      @include a700
-      font-size: 16px
-    &-line
-      height: 1px
-      width: 50px
-      background-color: #fff  
-    &-social a
-      margin-right: 20px
-    &-social svg
-      fill: #fff
-      transition: all .2s      
-      &:hover
-        fill: $blue-btn
-
-

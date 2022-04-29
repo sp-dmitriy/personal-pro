@@ -35,6 +35,24 @@
     background-color: $blue-btn
     color: #fff
 
+@media (max-width: 1330px)
+  .btn.big  
+    padding: 16px
+    font-size: 18px
+    line-height: 24px
+
+@media (max-width: 950px)
+  .btn.small
+    padding: 8px
+    font-size: 12px
+    line-height: 16px 
+
+@media (max-width: 410px)      
+  .btn.small
+    padding: 7px
+    font-size: 10px
+    line-height: 12px
+
 /* Title Begin */
 h2,
 h3 
@@ -50,7 +68,7 @@ h3
     height: 5px
     background-color: $blue-btn
 h2 
-   @include a700  
+  @include a700  
 h3 
   @include a400
 
@@ -61,7 +79,7 @@ h3
   grid-template-rows: 1fr 1fr 1fr
   background-color: $matrix-border
   gap: 1px
-  &-item 
+  &-item
     display: flex
     justify-content: center
     align-items: center
@@ -70,19 +88,20 @@ h3
     text-align: center
     color: $blue-num
     background-color: $light-grey
-    &.empty 
-     position: relative
-    &:after 
-      content: ""
-      position: absolute
-      height: 2px
-      width: 77px
-      background-color: $text
-      margin: auto
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
+    min-width: 135px
+  & .empty 
+      position: relative
+      &:after 
+        content: ""
+        position: absolute
+        height: 2px
+        width: 77px
+        background-color: $text
+        margin: auto
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
 
 /* Begin Input*/      
 input 
@@ -94,7 +113,6 @@ input
   border-radius: 2px
   border: 1px solid #ccc
   outline: none
-  // margin: 15px auto 40px
   &:placeholder
     color: $placeholder
     opacity: 0.4
