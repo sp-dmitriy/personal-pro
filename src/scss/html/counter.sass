@@ -1,5 +1,5 @@
 .counter 
-  padding: 20px 0 80px 0
+  padding: 80px 0 80px 0
   background: $light-grey
   @include a400
   &__inner 
@@ -20,8 +20,12 @@
   &__matrix
     height: 570px
     width: 690px
+    margin-top: 40px
   &-input
-    @inclide a400   
+    @inclide a400
+    width: 375px
+    span 
+      opacity: 0
     &__label
       font-size: 18px
       ine-height: 21px
@@ -30,6 +34,19 @@
       width: 357px
       height: 45px
       font-size: 22px
+  &-input.error
+    span 
+      color: red
+      opacity: 1
+      text-align: center
+      display: block
+      font-size: 14px
+      @include a400
+    input
+      border: 1px solid red   
+      
+
+
 
 
 

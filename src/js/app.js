@@ -1,27 +1,47 @@
+import * as scroll  from './modules/scroll.js'
+import { Matrix }  from './modules/matrix.js'
 import * as flsFunctions from './modules/functions.js'
 flsFunctions.isWebp()
 
-const burger =  document.querySelector('.header__burger')
-const menu =  document.querySelector('.header__menu')
-const links = document.querySelectorAll('.header__link')
-links.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault()
-    const id = link.getAttribute('href').substring(1)
-    const section = document.getElementById(id)  
 
-    if(section) {
-      seamless.scrollIntoView(section, {
-        behavior: "smooth",
-        top: 100
-      })
-    }
-    burger.classList.remove('active')
-    menu.classList.remove('active')
-  })
-})
+const matrixItems = document.querySelectorAll('.matrix-item')
+const btn = document.getElementById('counter-btn')
+const counterInput =  document.querySelector('.counter-input')
+const dbInput = document.getElementById('dateBirth')
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active')
-  menu.classList.toggle('active')
+dbInput.addEventListener('click', (event) => {
+  event.preventDefault()
+  
+  counterInput.classList.remove('error')
+  counterInput.querySelector('span').innerHTML="&nbsp;"
+})  
+
+btn.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  const dateBirth = dbInput.value
+  
+  const matrix = new Matrix(dateBirth).create()
+
+  if( matrix.message ) {
+    counterInput.classList.add('error')
+    counterInput.querySelector('span').innerHTML = matrix.message
+
+    matrixItems.forEach((item) => {
+      item.classList.add('empty')
+      item.textContent = ''
+    })
+  } else {
+    counterInput.classList.remove('error')
+    counterInput.querySelector('span').innerHTML="&nbsp;"
+    matrixItems.forEach((item) => {
+      item.classList.remove('empty')
+      item.textContent = matrix.data[item.dataset.item - 1]
+      if (!matrix.data[item.dataset.item - 1]) {
+        item.classList.add('empty')
+      }
+    })
+  } 
+
+
 })
