@@ -1,5 +1,7 @@
 import * as scroll  from './modules/scroll.js'
+import { showModal, closeModal } from './modules/modal.js'
 import { Matrix }  from './modules/matrix.js'
+
 import * as flsFunctions from './modules/functions.js'
 flsFunctions.isWebp()
 
@@ -11,7 +13,8 @@ const dbInput = document.getElementById('dateBirth')
 
 dbInput.addEventListener('click', (event) => {
   event.preventDefault()
-  
+  dbInput.value = dbInput.placeholder = ''
+
   counterInput.classList.remove('error')
   counterInput.querySelector('span').innerHTML="&nbsp;"
 })  
@@ -41,6 +44,7 @@ btn.addEventListener('click', (event) => {
         item.classList.add('empty')
       }
     })
+    showModal()
   } 
 
 
